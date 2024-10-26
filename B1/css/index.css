@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1c1c1c;
+    margin: 0;
+}
+
+.bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100px;
+}
+
+.bar {
+    width: 20px;
+    background-color: #00ffff;
+    margin: 0 10px;
+    animation: move 1s ease-in-out infinite alternate;
+}
+
+.bar:nth-child(1) {
+    height: 30px;
+    animation-delay: 0s;
+}
+
+.bar:nth-child(2) {
+    height: 50px;
+    animation-delay: 0.2s;
+}
+
+.bar:nth-child(3) {
+    height: 70px;
+    animation-delay: 0.4s;
+}
+
+.bar:nth-child(4) {
+    height: 40px;
+    animation-delay: 0.6s;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50px);
+    }
+}
