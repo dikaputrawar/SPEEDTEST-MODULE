@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    overflow: hidden;
+}
+
+#image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#cards-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    transition: all 0.5s ease;
+}
+
+.card {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.card.disappear {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.controls input, .controls button {
+    margin: 0 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+}
